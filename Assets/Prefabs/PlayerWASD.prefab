@@ -45,12 +45,8 @@ GameObject:
   - component: {fileID: 3202153288275982885}
   - component: {fileID: 2439092666584632490}
   - component: {fileID: 9103244308533723409}
-<<<<<<< HEAD
-  - component: {fileID: 9038363936320454140}
-=======
   - component: {fileID: 1902738850301754006}
   - component: {fileID: -4262378199147579022}
->>>>>>> 47f11a50fb213fdbb4b8c20cf733e1385547a768
   m_Layer: 0
   m_Name: PlayerWASD
   m_TagString: Player1
@@ -201,14 +197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524645873d173dc4b96a2d9d8ae6094a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  fireballLoc: {fileID: 2698409940056807608}
-  fireball: {fileID: 355659711271858146, guid: a92b01040d4a1194e95417109d79f1b6, type: 3}
-  eaterSymbol: {fileID: 7978795666042783957}
-  shield: {fileID: 7209313685399109526}
-  currentType: 1
-  canIEat: 1
-=======
 --- !u!82 &-4262378199147579022
 AudioSource:
   m_ObjectHideFlags: 0
@@ -305,7 +293,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
->>>>>>> 47f11a50fb213fdbb4b8c20cf733e1385547a768
 --- !u!1 &7978795666042783957
 GameObject:
   m_ObjectHideFlags: 0
