@@ -16,6 +16,8 @@ public class WASD_Movement : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private Animator animator; 
+    
+    private bool canMove = false;
 
     void Start() 
     {
@@ -26,6 +28,11 @@ public class WASD_Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(!canMove) 
+        {
+            return; 
+        }
+
         float xDir = Input.GetAxis("Horizontal");
         float yDir = Input.GetAxis("Vertical");
 
@@ -43,6 +50,11 @@ public class WASD_Movement : MonoBehaviour
 
         rigidbody.AddForce(transform.forward * speed * yDir);
 
+    }
+
+    public void CanMove() 
+    {
+        canMove = true; 
     }
 }
 

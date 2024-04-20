@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1417623899404962188}
   - component: {fileID: 1499535100527353340}
   - component: {fileID: 6034374883796613998}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ICanEat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 5638963642111565110}
   - component: {fileID: 4636012282881384731}
   - component: {fileID: 511990144159292473}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerGamePadImplementedMechs
   m_TagString: Player2
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 624254640604888632}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FireballLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,6 +312,14 @@ PrefabInstance:
     - target: {fileID: 1415222407204347725, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
       propertyPath: m_Name
       value: PlayerShield
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415222407204347725, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415222407204347725, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3568347493422045566, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
       propertyPath: m_LocalScale.x
@@ -426,6 +434,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 77204b92687fb1d4eb7d276b145c6104, type: 3}
       propertyPath: m_Name
       value: Character3_Final
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77204b92687fb1d4eb7d276b145c6104, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 77204b92687fb1d4eb7d276b145c6104, type: 3}
       propertyPath: m_IsActive
