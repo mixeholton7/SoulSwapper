@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 511990144159292473, guid: 5b3f7b2ea7de18b42a011c8d378d511f, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 799264e8f7af7304a93d30b0149db5eb, type: 3}
     - target: {fileID: 986575544213231239, guid: 5b3f7b2ea7de18b42a011c8d378d511f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.15
@@ -418,6 +422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCursor
       objectReference: {fileID: 0}
+    - target: {fileID: 7555977435128330447, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 799264e8f7af7304a93d30b0149db5eb, type: 3}
     - target: {fileID: 8527438288537769266, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
       propertyPath: Camera
       value: 
@@ -549,6 +557,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1902738850301754006, guid: 347f0c4b388bfa940982d6cf8ac7c131, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 799264e8f7af7304a93d30b0149db5eb, type: 3}
     - target: {fileID: 3277038332264259666, guid: 347f0c4b388bfa940982d6cf8ac7c131, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

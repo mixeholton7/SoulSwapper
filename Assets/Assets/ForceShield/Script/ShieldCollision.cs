@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class ShieldCollision : MonoBehaviour
 {
-
+    private AudioSource m_AudioSource;
+    public AudioClip audioClip;
     [SerializeField] string[] _collisionTag;
     float hitTime;
     Material mat;
 
     void Start()
     {
+        m_AudioSource = GetComponent<AudioSource>();
         if (GetComponent<Renderer>())
         {
             mat = GetComponent<Renderer>().sharedMaterial;
@@ -41,6 +43,7 @@ public class ShieldCollision : MonoBehaviour
 
             if (_collisionTag.Length > 0 || collision.transform.CompareTag(_collisionTag[i]))
             {
+                m_AudioSource.Play();
                 //Debug.Log("hit");
                 ContactPoint[] _contacts = collision.contacts;
                 for (int i2 = 0; i2 < _contacts.Length; i2++)

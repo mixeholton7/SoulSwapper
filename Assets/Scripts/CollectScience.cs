@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class CollectScience : MonoBehaviour
 {
- 
+    private AudioSource audioSource;
+    public AudioClip audioClip;
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         //var points = 0;
@@ -27,6 +32,7 @@ public class CollectScience : MonoBehaviour
 
             // print("WHat tag am I ? : player: " + playerType);
             scoreManeger.Instance.AddPoint(playerType);
+            audioSource.Play();
             Destroy(other.gameObject);
         }
     }
