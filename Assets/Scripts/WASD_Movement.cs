@@ -5,7 +5,7 @@ using UnityEngine;
 public class WASD_Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float speed = .5f;
+    public float speed = .5f;
     private void Update()
     {
         float xDir = Input.GetAxis("Horizontal");

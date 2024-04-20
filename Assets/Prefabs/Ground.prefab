@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3344410326356404982}
   - component: {fileID: 7099963121963136459}
   m_Layer: 0
-  m_Name: GroundCursor
+  m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,5 +135,5 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 7bba6e2d2159b254495e555cfda54d40, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 24da93a816b94de448333413365a5f03, type: 2}
   m_BuildHeightMesh: 0
