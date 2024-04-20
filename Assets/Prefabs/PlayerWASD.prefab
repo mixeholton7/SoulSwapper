@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 3202153288275982885}
   - component: {fileID: 2439092666584632490}
   - component: {fileID: 9103244308533723409}
+  - component: {fileID: 1902738850301754006}
   m_Layer: 0
   m_Name: PlayerWASD
   m_TagString: Player1
@@ -144,7 +145,7 @@ Rigidbody:
   m_GameObject: {fileID: 4339968211015393871}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -183,6 +184,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5.956656
   m_Center: {x: 0, y: 6.0490394, z: 1.5056887}
+--- !u!114 &1902738850301754006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4339968211015393871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1df0d31e70a9145b0047dd6108d7bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7978795666042783957
 GameObject:
   m_ObjectHideFlags: 0

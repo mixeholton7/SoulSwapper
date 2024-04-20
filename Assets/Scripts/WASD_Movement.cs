@@ -15,10 +15,12 @@ public class WASD_Movement : MonoBehaviour
     private float gravityValue = -40f;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
+    private Animator animator; 
 
     void Start() 
     {
         rigidbody = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
     }
 
 
@@ -26,6 +28,15 @@ public class WASD_Movement : MonoBehaviour
     {
         float xDir = Input.GetAxis("Horizontal");
         float yDir = Input.GetAxis("Vertical");
+
+        if(xDir != 0 || yDir != 0)
+        {
+            animator.SetBool("Moving", true); 
+        }
+        else
+        {
+            animator.SetBool("Moving", false); 
+        }
 
         Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, xDir, 0) * Time.fixedDeltaTime * rotationSpeed);
         rigidbody.MoveRotation(rigidbody.rotation * deltaRotation);   

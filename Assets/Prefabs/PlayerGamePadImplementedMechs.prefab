@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 6746898920336865838}
   - component: {fileID: 5638963642111565110}
   - component: {fileID: 4636012282881384731}
+  - component: {fileID: 511990144159292473}
   m_Layer: 0
   m_Name: PlayerGamePadImplementedMechs
   m_TagString: Player2
@@ -209,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3130a68239c3f40a7ede226c563d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 40
 --- !u!143 &5638963642111565110
 CharacterController:
   m_ObjectHideFlags: 0
@@ -255,8 +256,20 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 4.335621
-  m_Center: {x: 0.054821014, y: 8.879459, z: 1.3391948}
+  m_Radius: 5
+  m_Center: {x: 0, y: 5.5, z: 0}
+--- !u!114 &511990144159292473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365867301824381938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1df0d31e70a9145b0047dd6108d7bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8063424152686946988
 GameObject:
   m_ObjectHideFlags: 0
