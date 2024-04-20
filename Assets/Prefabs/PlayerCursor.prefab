@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1184083865850179784}
   - component: {fileID: 8527438288537769266}
   - component: {fileID: 1576457299003196107}
-  - component: {fileID: 7555977435128330447}
+  - component: {fileID: 8084351791183021422}
   m_Layer: 0
   m_Name: PlayerCursor
   m_TagString: Player3
@@ -206,7 +206,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7555977435128330447
+--- !u!114 &8084351791183021422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,9 +215,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5027946485461312126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1df0d31e70a9145b0047dd6108d7bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 524645873d173dc4b96a2d9d8ae6094a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireballLoc: {fileID: 205884650996639219}
+  fireball: {fileID: 355659711271858146, guid: a92b01040d4a1194e95417109d79f1b6, type: 3}
+  eaterSymbol: {fileID: 5738886133773326642}
+  shield: {fileID: 4077402903386139865}
+  currentType: 5
+  canIEat: 1
 --- !u!1 &5738886133773326642
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +403,11 @@ PrefabInstance:
 --- !u!4 &1923996030739622634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3568347493422045566, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
+  m_PrefabInstance: {fileID: 3113738940065821588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4077402903386139865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1415222407204347725, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
   m_PrefabInstance: {fileID: 3113738940065821588}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8594429313347950988
