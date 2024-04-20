@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3658155070637089320}
   - component: {fileID: 3202153288275982885}
   - component: {fileID: 2439092666584632490}
+  - component: {fileID: 9103244308533723409}
   m_Layer: 0
   m_Name: PlayerWASD
   m_TagString: Untagged
@@ -104,7 +105,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -120,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c490685ae0a314469209d021a39a4bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 50
+  rotationSpeed: 100
 --- !u!54 &2439092666584632490
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,8 +148,29 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!135 &9103244308533723409
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4339968211015393871}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5
+  m_Center: {x: 0, y: 5.5, z: 0}
 --- !u!1001 &5865237259457824983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -162,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c441b83391bfd28419310563a0db3e06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c441b83391bfd28419310563a0db3e06, type: 3}
       propertyPath: m_LocalPosition.z

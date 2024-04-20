@@ -5,20 +5,32 @@ using UnityEngine;
 public class WASD_Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float speed = .5f;
+    public float speed = 10f;
+    public float rotationSpeed = 2f;
+
+
     private float smoothTime = 0.05f;
     private float CurrentVelo;
-    private void Update()
+    private Rigidbody rigidbody;
+    private float gravityValue = -40f;
+    private Vector3 playerVelocity;
+    private bool groundedPlayer;
+
+    void Start() 
     {
-        float xDir = Input.GetAxis("Horizontal")*smoothTime;
-        float yDir = Input.GetAxis("Vertical")*smoothTime;
-        var TargetAngle = Mathf.Atan2(xDir, yDir)*Mathf.Rad2Deg;
-        var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, TargetAngle, ref CurrentVelo, smoothTime);
-        transform.rotation = Quaternion.Euler(0.0f, TargetAngle, 0.0f);
+        rigidbody = GetComponent<Rigidbody>();
+    }
 
-        Vector3 MoveDir = new Vector3(xDir, 0.0f, yDir);
 
-        transform.position += MoveDir * speed;        
+    private void FixedUpdate()
+    {
+        float xDir = Input.GetAxis("Horizontal");
+        float yDir = Input.GetAxis("Vertical");
+
+        Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, xDir, 0) * Time.fixedDeltaTime * rotationSpeed);
+        rigidbody.MoveRotation(rigidbody.rotation * deltaRotation);   
+
+        rigidbody.AddForce(transform.forward * speed * yDir);
 
     }
 }
