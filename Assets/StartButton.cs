@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class StartButton : MonoBehaviour
 {
@@ -12,9 +13,9 @@ public class StartButton : MonoBehaviour
     public WASD_Movement wasdMovement;
     public GamePad_Movement gamePadMovement;
 
-    public GameObject startText1; 
-    public GameObject startText2; 
-    public GameObject startText3; 
+    public TMP_Text startText1; 
+    public TMP_Text startText2; 
+    public TMP_Text startText3; 
 
 
     public void StartGame() 
@@ -32,24 +33,14 @@ public class StartButton : MonoBehaviour
 
     IEnumerator ShowText()
     {
-        yield return new WaitForSeconds(1);
+        Debug.Log("hello"); 
+        
+        startText1.text = "HEj"; 
 
-        startText1.SetActive(true); 
+        yield return new WaitForSeconds(2);
 
-        yield return new WaitForSeconds(1);
+        Debug.Log("yo"); 
 
-        startText1.SetActive(false); 
-        startText2.SetActive(true); 
-
-        yield return new WaitForSeconds(1);
-
-        startText2.SetActive(false); 
-        startText3.SetActive(true); 
-
-        yield return new WaitForSeconds(1);
-
-        startText3.SetActive(false); 
-
-        Destroy(gameObject); 
+        startText1.text = ""; 
     }
 }
