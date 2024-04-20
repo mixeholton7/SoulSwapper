@@ -33,8 +33,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3.58, y: 3.58, z: 3.58}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5450611908104106921}
   - {fileID: 1098817394397643859}
@@ -386,7 +386,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bcb56675376ab41a081c3a852e8cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  fireballSpeed: 40
+  BounceTimes: 5
+=======
+  audioClip: {fileID: 8300000, guid: 800087bc355827344b467c989e436302, type: 3}
   fireballSpeed: 0
+  BounceTimes: 0
+>>>>>>> 47f11a50fb213fdbb4b8c20cf733e1385547a768
 --- !u!1 &818818157036317009
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,8 +422,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.38, y: 2.38, z: 2.38}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4952698939022907218}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -502,7 +509,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818818157036317009}
   serializedVersion: 8
-  lengthInSec: 1
+  lengthInSec: 2.62
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 3
@@ -510,7 +517,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -577,7 +584,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 4.05
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -612,7 +619,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -0.21
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1011,14 +1018,14 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 500
+    maxNumParticles: 798
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.12
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1075,7 +1082,7 @@ ParticleSystem:
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0
+    radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -1158,7 +1165,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.47
+      value: 0.4
       mode: 0
       spread: 0
       speed:
@@ -1277,7 +1284,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 51.53
       minScalar: 10
       maxCurve:
         serializedVersion: 2

@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class CollectScience : MonoBehaviour
 {
- 
+
+    public bool canIEat = true;
+    private AudioSource audioSource;
+    public AudioClip audioClip;
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
-        //var points = 0;
         var playerType = 0;
 
-        if (other.tag == "Point")
+        if (other.tag == "Point" || canIEat)
         {
             if (this.gameObject.tag == "Player1")
             {
@@ -25,8 +31,8 @@ public class CollectScience : MonoBehaviour
                 playerType = 3;
             }
 
-            // print("WHat tag am I ? : player: " + playerType);
             scoreManeger.Instance.AddPoint(playerType);
+            audioSource.Play();
             Destroy(other.gameObject);
         }
     }
