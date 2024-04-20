@@ -9,13 +9,28 @@ public class Cursor_Movement : MonoBehaviour
     public RaycastHit RaycastHit;
     private NavMeshAgent agent;
     private const float rotSpeed= 20f;
-
     private string GroundTag = "Ground";
+    private Vector3 targetPos; 
+    private Animator animator; 
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
+        animator = GetComponentInChildren<Animator>();
+    }
+
+    void Update()
+    {
+        if(Vector3.Distance(transform.position, targetPos) > 1f)
+        {
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false); 
+        }
     }
 
     // Update is called once per frame
@@ -31,7 +46,8 @@ public class Cursor_Movement : MonoBehaviour
             {
                 if (RaycastHit.collider.CompareTag(GroundTag))
                 {
-                    agent.SetDestination(RaycastHit.point);
+                    targetPos = RaycastHit.point;
+                    agent.SetDestination(targetPos);
                 }
             }
         }
