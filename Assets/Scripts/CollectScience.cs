@@ -26,6 +26,7 @@ public class CollectScience : MonoBehaviour
                 playerType = 3;
             }
         }
+        print("WHat tag am I ? : player: " + playerType);
         scoreManeger.Instance.AddPoint(playerType);
         Destroy(other.gameObject);
     }
