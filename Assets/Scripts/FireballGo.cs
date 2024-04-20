@@ -5,15 +5,13 @@ using UnityEngine;
 
 public class FireballGo : MonoBehaviour
 {
-    private AudioSource m_AudioSource;
-    public AudioClip audioClip;
+
     public float fireballSpeed;
     public int BounceTimes;
     private int bounce;
     // Start is called before the first frame update
-    void Start() {
-
-        m_AudioSource = GetComponent<AudioSource>();
+    void Start() { 
+    
         if (fireballSpeed <= 0f) {
             fireballSpeed = 10f;
         }
@@ -35,10 +33,7 @@ public class FireballGo : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         bounce++;
-        if(collision.gameObject.tag == "Shield")
-        {
-            m_AudioSource.Play();
-        }
+        
         if (collision == null)
         {
         }
