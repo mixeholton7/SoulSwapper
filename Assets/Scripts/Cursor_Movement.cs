@@ -12,6 +12,7 @@ public class Cursor_Movement : MonoBehaviour
     private string GroundTag = "Ground";
     private Vector3 targetPos; 
     private Animator animator; 
+    private bool canMove = false; 
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,12 @@ public class Cursor_Movement : MonoBehaviour
 
     void Update()
     {
-        if(Vector3.Distance(transform.position, targetPos) > 1f)
+        if(!canMove) 
+        {
+            return; 
+        }
+
+        if(Vector3.Distance(transform.position, targetPos) > 1f && canMove)
         {
             animator.SetBool("Moving", true);
         }
@@ -36,6 +42,11 @@ public class Cursor_Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(!canMove) 
+        { 
+            return; 
+        }
+
         InstantlyTurn(agent.destination);
 
         if (Input.GetMouseButton(1))
@@ -60,5 +71,10 @@ public class Cursor_Movement : MonoBehaviour
         Vector3 direction = (destination - transform.position).normalized;
         Quaternion  qDir= Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, qDir, Time.deltaTime * rotSpeed);
+    }
+
+    public void CanMove() 
+    {
+        canMove = true; 
     }
 }

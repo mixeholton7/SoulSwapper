@@ -12,6 +12,7 @@ public class GamePad_Movement : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private Animator animator;
+    private bool canMove = false;
 
 
     void Start() 
@@ -23,6 +24,11 @@ public class GamePad_Movement : MonoBehaviour
 
     void Update()
     {
+        if(!canMove) 
+        {
+            return; 
+        }
+
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -59,5 +65,10 @@ public class GamePad_Movement : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
 
+    }
+    
+    public void CanMove() 
+    {
+        canMove = true; 
     }
 }
