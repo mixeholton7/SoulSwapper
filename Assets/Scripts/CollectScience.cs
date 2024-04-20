@@ -15,7 +15,6 @@ public class CollectScience : MonoBehaviour
             if (this.gameObject.tag == "Player1")
             {
                 playerType = 1;
-
             }
             if (this.gameObject.tag == "Player2")
             {
@@ -25,9 +24,10 @@ public class CollectScience : MonoBehaviour
             {
                 playerType = 3;
             }
+
+            // print("WHat tag am I ? : player: " + playerType);
+            scoreManeger.Instance.AddPoint(playerType);
+            Destroy(other.gameObject);
         }
-        print("WHat tag am I ? : player: " + playerType);
-        scoreManeger.Instance.AddPoint(playerType);
-        Destroy(other.gameObject);
     }
 }
