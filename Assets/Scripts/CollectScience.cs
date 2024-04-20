@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class CollectScience : MonoBehaviour
 {
+<<<<<<< HEAD
     public bool canIEat = true;
  
+=======
+    private AudioSource audioSource;
+    public AudioClip audioClip;
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+>>>>>>> 47f11a50fb213fdbb4b8c20cf733e1385547a768
     private void OnTriggerEnter(Collider other)
     {
         var playerType = 0;
@@ -26,6 +35,7 @@ public class CollectScience : MonoBehaviour
             }
 
             scoreManeger.Instance.AddPoint(playerType);
+            audioSource.Play();
             Destroy(other.gameObject);
         }
     }
