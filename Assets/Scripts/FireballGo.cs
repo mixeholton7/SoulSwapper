@@ -38,6 +38,10 @@ public class FireballGo : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (other.tag == "Point")
+        {
+            return;
+        }
         else
         {
             fireballSpeed = -fireballSpeed;

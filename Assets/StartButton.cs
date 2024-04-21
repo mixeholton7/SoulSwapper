@@ -31,7 +31,7 @@ public class StartButton : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             GameIsStarted = true;
         }
