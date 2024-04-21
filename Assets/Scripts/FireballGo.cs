@@ -30,12 +30,13 @@ public class FireballGo : MonoBehaviour
         transform.Translate(Vector3.forward * fireballSpeed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         bounce++;
-        
-        if (collision == null)
+
+        if (other.tag == "shield")
         {
+            Destroy(gameObject);
         }
         else
         {
@@ -46,4 +47,5 @@ public class FireballGo : MonoBehaviour
             }
         }
     }
+
 }

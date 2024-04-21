@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class ActionScript : MonoBehaviour
 {
+    public Cursor_Movement cursorMovement;
+    public WASD_Movement wasdMovement;
+    public GamePad_Movement gamePadMovement;
+
     public GameObject fireballLoc;
     public GameObject fireball;
     public GameObject eaterSymbol;
     public GameObject shield;
+    public MeshRenderer myMeshRend;
     public AudioSource AudioSource;
     public AudioClip Fire;
     public AudioClip Eat;
@@ -18,6 +23,7 @@ public class ActionScript : MonoBehaviour
     private bool CanIShield => currentType == 3;
     private bool CanIFireBall = true;
     public bool canIEat => currentType == 2;
+    private bool amIdead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,43 +35,46 @@ public class ActionScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CanIShield)
+        if (!amIdead)
         {
-            shield.SetActive(true); 
-        }
-        else
-        {
-            shield.SetActive(false);
-        }
+            if (CanIShield)
+            {
+                shield.SetActive(true);
+            }
+            else
+            {
+                shield.SetActive(false);
+            }
 
-        if (canIEat)
-        {
-            eaterSymbol.SetActive(true);
-        }
-        else
-        {
-            eaterSymbol.SetActive(false);
-        }
+            if (canIEat)
+            {
+                eaterSymbol.SetActive(true);
+            }
+            else
+            {
+                eaterSymbol.SetActive(false);
+            }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            print("SPACEBAR");
-            checkType(currentType);
-            // Fireball if currType == 1
-            // Eater if currtype == 2
-            // shield if currtype == 3
-        }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                print("SPACEBAR");
+                checkType(currentType);
+                // Fireball if currType == 1
+                // Eater if currtype == 2
+                // shield if currtype == 3
+            }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            print("I click left mouse");
-            checkType(currentType);
-        }
+            if (Input.GetMouseButtonDown(0))
+            {
+                print("I click left mouse");
+                checkType(currentType);
+            }
 
-        if ( Input.GetButtonDown("fire1joy"))
-        {
-            print("I press A");
-            checkType(currentType);
+            if (Input.GetButtonDown("fire1joy"))
+            {
+                print("I press A");
+                checkType(currentType);
+            }
         }
     }
 
@@ -112,6 +121,68 @@ public class ActionScript : MonoBehaviour
             scoreManeger.Instance.AddPoint(playerType);
             Destroy(other.gameObject);
         }
+
+        print("There is a collision: " + currentType );
+        print("With " + other.tag);
+
+        if (other.tag == "Fireball")
+        {
+            int whatPlayerAmI = 0;
+            if (this.gameObject.tag == "Player1")
+            {
+                whatPlayerAmI = 1;
+                print("Player 1 is hit");
+                wasdMovement.CantMoveWASD();
+                amIdead = true;
+                StartCoroutine(Death(whatPlayerAmI));
+                
+            }
+            if (this.gameObject.tag == "Player2")
+            {
+                whatPlayerAmI = 2;
+                print("Player 2 is hit");
+                gamePadMovement.CantMovePad();
+                amIdead = true;
+                StartCoroutine(Death(whatPlayerAmI));
+                
+            }
+            if (this.gameObject.tag == "Player3")
+            {
+                whatPlayerAmI = 3;
+                print("Player 3 is hit");
+                cursorMovement.CantMoveCurse();
+                amIdead= true;
+                StartCoroutine(Death(whatPlayerAmI));
+                
+                
+            }
+            Destroy(other.gameObject);
+            //gameObject.SetActive(false);
+            /*
+            switch (whatPlayerAmI)
+            {
+                case 1:
+                    print("stop player 1 moveing");
+                    
+                    break;
+                case 2:
+                    print("stop player 2 moveing");
+                    wasdMovement.CantMoveWASD();
+                    StartCoroutine(Death(whatPlayerAmI));
+                    break;
+                case 3:
+                    print("stop player 3 moveing");
+                    gamePadMovement.CantMovePad();
+                    StartCoroutine(Death(whatPlayerAmI));
+                    break;
+                default:
+                    print("this is not supposed to happen");
+                    break;
+            }
+            */
+            //scoreManeger.Instance.AddPoint(playerType);
+            //Destroy(other.gameObject);
+        }
     }
 
     IEnumerator ShootFireball()
@@ -130,6 +201,61 @@ public class ActionScript : MonoBehaviour
             currentType = 1;
         }
         StartCoroutine(increaseCount());
+    }
+
+    /*
+      if (this.gameObject.tag == "Player1")
+            {
+                print("Player 1 is hit");
+                wasdMovement.CantMoveWASD();
+                StartCoroutine(Death(whatPlayerAmI));
+                whatPlayerAmI = 1;
+            }
+            if (this.gameObject.tag == "Player2")
+            {
+                print("Player 2 is hit");
+                gamePadMovement.CantMovePad();
+                StartCoroutine(Death(whatPlayerAmI));
+                whatPlayerAmI = 2;
+            }
+            if (this.gameObject.tag == "Player3")
+            {
+                print("Player 3 is hit");
+                cursorMovement.CantMoveCurse();
+                StartCoroutine(Death(whatPlayerAmI));
+                
+                whatPlayerAmI = 3;
+            }
+     */
+    IEnumerator Death(int thePlayer)
+    {
+        print("STOPPED MOVEING");
+        myMeshRend.enabled = false;
+        yield return new WaitForSeconds(1);
+        myMeshRend.enabled = true;
+        yield return new WaitForSeconds(1);
+        myMeshRend.enabled = false;
+        yield return new WaitForSeconds(1);
+        myMeshRend.enabled = true;
+        switch (thePlayer)
+        {
+            case 1:
+                print("start player 1 moveing");
+                wasdMovement.CanMoveWASD();
+                break;
+            case 2:
+                print("start player 2 moveing");
+                gamePadMovement.CanMovePad();
+                break;
+            case 3:
+                print("start player 3 moveing");
+                cursorMovement.CanMoveCurse();
+                break;
+            default:
+                print("this is not supposed to happen");
+                break;
+        }
+        amIdead = false;
     }
 
 }

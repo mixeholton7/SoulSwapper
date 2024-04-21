@@ -12,7 +12,7 @@ public class GamePad_Movement : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private Animator animator;
-    private bool canMove = false;
+    private bool canMovePad = false;
 
 
     void Start() 
@@ -24,7 +24,7 @@ public class GamePad_Movement : MonoBehaviour
 
     void Update()
     {
-        if(!canMove) 
+        if(!canMovePad) 
         {
             return; 
         }
@@ -67,8 +67,13 @@ public class GamePad_Movement : MonoBehaviour
 
     }
     
-    public void CanMove() 
+    public void CanMovePad() 
     {
-        canMove = true; 
+        canMovePad = true; 
+    }
+
+    public void CantMovePad()
+    {
+        canMovePad = false;
     }
 }

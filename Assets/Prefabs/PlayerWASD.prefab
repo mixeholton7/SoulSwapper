@@ -294,10 +294,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524645873d173dc4b96a2d9d8ae6094a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorMovement: {fileID: 0}
+  wasdMovement: {fileID: 3202153288275982885}
+  gamePadMovement: {fileID: 0}
   fireballLoc: {fileID: 2698409940056807608}
   fireball: {fileID: 355659711271858146, guid: a92b01040d4a1194e95417109d79f1b6, type: 3}
   eaterSymbol: {fileID: 7978795666042783957}
   shield: {fileID: 7209313685399109526}
+  myMeshRend: {fileID: 5090219418827101267}
   AudioSource: {fileID: -4262378199147579022}
   Fire: {fileID: 8300000, guid: 800087bc355827344b467c989e436302, type: 3}
   Eat: {fileID: 8300000, guid: 799264e8f7af7304a93d30b0149db5eb, type: 3}
@@ -552,6 +556,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2275469698622246133}
   m_SourcePrefab: {fileID: 100100000, guid: c441b83391bfd28419310563a0db3e06, type: 3}
+--- !u!23 &5090219418827101267 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c441b83391bfd28419310563a0db3e06, type: 3}
+  m_PrefabInstance: {fileID: 5865237259457824983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6264290800874811196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c441b83391bfd28419310563a0db3e06, type: 3}
