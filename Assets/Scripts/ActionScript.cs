@@ -19,6 +19,11 @@ public class ActionScript : MonoBehaviour
     public AudioClip Eat;
     public AudioClip Swap;
 
+    public GameObject wizard; 
+    public GameObject chicken; 
+    public GameObject fire_wizard; 
+    public GameObject shield_wizard; 
+
     public int currentType;
 
     private bool CanIShield => currentType == 3;
@@ -43,19 +48,66 @@ public class ActionScript : MonoBehaviour
             if (CanIShield)
             {
                 shield.SetActive(true);
+
+                chicken.SetActive(false);
+                wizard.SetActive(false); 
+                fire_wizard.SetActive(false); 
+
+                shield_wizard.SetActive(true);
+                myMeshRend = shield_wizard.GetComponent<MeshRenderer>();
             }
             else
             {
                 shield.SetActive(false);
+
+                chicken.SetActive(false);
+                fire_wizard.SetActive(false);
+                shield_wizard.SetActive(false);
+
+                wizard.SetActive(true);
+                myMeshRend = wizard.GetComponent<MeshRenderer>();
             }
 
             if (canIEat)
             {
-                eaterSymbol.SetActive(true);
+                eaterSymbol.SetActive(true); 
+                
+                wizard.SetActive(false); 
+                fire_wizard.SetActive(false);
+                shield_wizard.SetActive(false);
+
+                chicken.SetActive(true);
+                myMeshRend = chicken.GetComponent<MeshRenderer>();
             }
             else
             {
                 eaterSymbol.SetActive(false);
+
+                chicken.SetActive(false);
+                fire_wizard.SetActive(false);
+                shield_wizard.SetActive(false);
+                
+                wizard.SetActive(true);
+                myMeshRend = wizard.GetComponent<MeshRenderer>();
+            }
+
+            if (CanIFireBall)
+            {
+                chicken.SetActive(false);
+                wizard.SetActive(false);
+                shield_wizard.SetActive(false);
+
+                fire_wizard.SetActive(true); 
+                myMeshRend = fire_wizard.GetComponent<MeshRenderer>();
+            }
+            else
+            {
+                chicken.SetActive(false);
+                fire_wizard.SetActive(false); 
+                shield_wizard.SetActive(false);
+
+                wizard.SetActive(true);
+                myMeshRend = wizard.GetComponent<MeshRenderer>();
             }
 
             if (Input.GetKeyDown(KeyCode.Space) && currentType == 1 && this.gameObject.tag == "Player1")
