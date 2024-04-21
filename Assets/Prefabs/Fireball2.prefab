@@ -386,6 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bcb56675376ab41a081c3a852e8cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 800087bc355827344b467c989e436302, type: 3}
   fireballSpeed: 40
   BounceTimes: 5
 --- !u!1 &818818157036317009

@@ -9,6 +9,9 @@ public class ActionScript : MonoBehaviour
     public GameObject fireball;
     public GameObject eaterSymbol;
     public GameObject shield;
+    public AudioSource AudioSource;
+    public AudioClip Fire;
+    public AudioClip Eat;
 
     public int currentType;
 

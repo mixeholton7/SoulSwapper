@@ -297,6 +297,9 @@ MonoBehaviour:
   fireball: {fileID: 355659711271858146, guid: a92b01040d4a1194e95417109d79f1b6, type: 3}
   eaterSymbol: {fileID: 7978795666042783957}
   shield: {fileID: 7209313685399109526}
+  AudioSource: {fileID: -4262378199147579022}
+  Fire: {fileID: 8300000, guid: 800087bc355827344b467c989e436302, type: 3}
+  Eat: {fileID: 8300000, guid: 799264e8f7af7304a93d30b0149db5eb, type: 3}
   currentType: 1
 --- !u!1 &7978795666042783957
 GameObject:
@@ -560,6 +563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7723477804731829332, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e3ad458f6d186840a766e3f569ba406, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
