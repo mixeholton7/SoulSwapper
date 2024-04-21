@@ -222,8 +222,7 @@ MonoBehaviour:
   fireball: {fileID: 355659711271858146, guid: a92b01040d4a1194e95417109d79f1b6, type: 3}
   eaterSymbol: {fileID: 5738886133773326642}
   shield: {fileID: 4077402903386139865}
-  currentType: 5
-  canIEat: 1
+  currentType: 3
 --- !u!1 &5738886133773326642
 GameObject:
   m_ObjectHideFlags: 0

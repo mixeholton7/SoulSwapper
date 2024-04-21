@@ -13,7 +13,7 @@ public class ActionScript : MonoBehaviour
     public int currentType;
 
     private bool CanIShield => currentType == 3;
-    private bool CanIFireBall;
+    private bool CanIFireBall = true;
     public bool canIEat => currentType == 2;
 
     // Start is called before the first frame update
