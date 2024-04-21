@@ -55,7 +55,7 @@ public class Cursor_Movement : MonoBehaviour
 
             if(Physics.Raycast(ray, out RaycastHit, Mathf.Infinity))
             {
-                if (RaycastHit.collider.CompareTag(GroundTag))
+                if (RaycastHit.collider.CompareTag(GroundTag) || RaycastHit.collider.CompareTag("SpawnPoint"))
                 {
                     targetPos = RaycastHit.point;
                     agent.SetDestination(targetPos);

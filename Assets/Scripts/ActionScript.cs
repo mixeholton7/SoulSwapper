@@ -233,11 +233,19 @@ public class ActionScript : MonoBehaviour
     {
         print("STOPPED MOVEING");
         myMeshRend.enabled = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
         myMeshRend.enabled = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
         myMeshRend.enabled = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
+        myMeshRend.enabled = true;
+        yield return new WaitForSeconds(0.2f);
+        myMeshRend.enabled = false;
+        yield return new WaitForSeconds(0.2f);
+        myMeshRend.enabled = true;
+        yield return new WaitForSeconds(0.2f);
+        myMeshRend.enabled = false;
+        yield return new WaitForSeconds(0.2f);
         myMeshRend.enabled = true;
         switch (thePlayer)
         {

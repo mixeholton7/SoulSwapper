@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8341396694571974862}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FireballLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 9103244308533723409}
   - component: {fileID: -4262378199147579022}
   - component: {fileID: 9038363936320454140}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerWASD
   m_TagString: Player1
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ MonoBehaviour:
   fireball: {fileID: 355659711271858146, guid: a92b01040d4a1194e95417109d79f1b6, type: 3}
   eaterSymbol: {fileID: 7978795666042783957}
   shield: {fileID: 7209313685399109526}
-  myMeshRend: {fileID: 5090219418827101267}
+  myMeshRend: {fileID: 441409157348483552}
   AudioSource: {fileID: -4262378199147579022}
   Fire: {fileID: 8300000, guid: 800087bc355827344b467c989e436302, type: 3}
   Eat: {fileID: 8300000, guid: 799264e8f7af7304a93d30b0149db5eb, type: 3}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 1813231430744747036}
   - component: {fileID: 944823516975435846}
   - component: {fileID: 5628767069325811136}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 2441512575218672777}
   - component: {fileID: 7843707577277377770}
   - component: {fileID: 8579813455944259110}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ICanEat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,16 +551,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue_Wizard_idle_Final
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1cf370b5399e8e940953e2973627298d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1cf370b5399e8e940953e2973627298d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6989758607272396804}
   m_SourcePrefab: {fileID: 100100000, guid: 1cf370b5399e8e940953e2973627298d, type: 3}
+--- !u!23 &441409157348483552 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 1cf370b5399e8e940953e2973627298d, type: 3}
+  m_PrefabInstance: {fileID: 1288494500594777444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1615419622935468687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1cf370b5399e8e940953e2973627298d, type: 3}
   m_PrefabInstance: {fileID: 1288494500594777444}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2098905274620559413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1cf370b5399e8e940953e2973627298d, type: 3}
+  m_PrefabInstance: {fileID: 1288494500594777444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6989758607272396804
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098905274620559413}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca9beaa4419853a40b3f6ca22be00092, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2510079098851807086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -612,6 +650,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f190adcf7ae92b045a07c8eb5421ea81, type: 3}
       propertyPath: m_Name
       value: Blue_Wizard_fireball_Final
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f190adcf7ae92b045a07c8eb5421ea81, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f190adcf7ae92b045a07c8eb5421ea81, type: 3}
       propertyPath: m_IsActive
@@ -680,6 +722,10 @@ PrefabInstance:
       value: Blue_Wizard_shield_Final
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: adcbc6d3dbf50d54c8c82801edcaedab, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: adcbc6d3dbf50d54c8c82801edcaedab, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -746,6 +792,10 @@ PrefabInstance:
       value: Character2_Final
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c441b83391bfd28419310563a0db3e06, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c441b83391bfd28419310563a0db3e06, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -757,11 +807,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2275469698622246133}
   m_SourcePrefab: {fileID: 100100000, guid: c441b83391bfd28419310563a0db3e06, type: 3}
---- !u!23 &5090219418827101267 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c441b83391bfd28419310563a0db3e06, type: 3}
-  m_PrefabInstance: {fileID: 5865237259457824983}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6264290800874811196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c441b83391bfd28419310563a0db3e06, type: 3}
@@ -804,6 +849,10 @@ PrefabInstance:
     - target: {fileID: 1415222407204347725, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
       propertyPath: m_Name
       value: PlayerShield
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415222407204347725, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3568347493422045566, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
       propertyPath: m_LocalScale.x

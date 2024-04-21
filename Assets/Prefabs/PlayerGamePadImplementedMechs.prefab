@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 161193447815791355}
   - component: {fileID: 3180280086200326510}
   - component: {fileID: 2235846876408181346}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1417623899404962188}
   - component: {fileID: 1499535100527353340}
   - component: {fileID: 6034374883796613998}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ICanEat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 4636012282881384731}
   - component: {fileID: 7547331314232205714}
   - component: {fileID: 2800103879919897645}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerGamePadImplementedMechs
   m_TagString: Player2
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ MonoBehaviour:
   fireball: {fileID: 355659711271858146, guid: a92b01040d4a1194e95417109d79f1b6, type: 3}
   eaterSymbol: {fileID: 3470288668226616222}
   shield: {fileID: 1877241767421420757}
-  myMeshRend: {fileID: 98768970091005145}
+  myMeshRend: {fileID: 8039896630375333691}
   AudioSource: {fileID: 2800103879919897645}
   Fire: {fileID: 8300000, guid: 800087bc355827344b467c989e436302, type: 3}
   Eat: {fileID: 8300000, guid: 799264e8f7af7304a93d30b0149db5eb, type: 3}
@@ -474,7 +474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 624254640604888632}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FireballLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,6 +508,10 @@ PrefabInstance:
     - target: {fileID: 1415222407204347725, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
       propertyPath: m_Name
       value: PlayerShield
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415222407204347725, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3568347493422045566, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
       propertyPath: m_LocalScale.x
@@ -633,6 +637,10 @@ PrefabInstance:
       value: Character3_Final
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 77204b92687fb1d4eb7d276b145c6104, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77204b92687fb1d4eb7d276b145c6104, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -644,11 +652,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1061384273279945049}
   m_SourcePrefab: {fileID: 100100000, guid: 77204b92687fb1d4eb7d276b145c6104, type: 3}
---- !u!23 &98768970091005145 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 77204b92687fb1d4eb7d276b145c6104, type: 3}
-  m_PrefabInstance: {fileID: 1630145264582498397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1231111102054858678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 77204b92687fb1d4eb7d276b145c6104, type: 3}
@@ -733,6 +736,10 @@ PrefabInstance:
       value: Purple_Wizard_shield_Final
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ab08419698c65324fa0b1f7b656461d7, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ab08419698c65324fa0b1f7b656461d7, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -797,6 +804,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7478941659efda242a4c6c5702efbcac, type: 3}
       propertyPath: m_Name
       value: Purple_Wizard_fireball_Final
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7478941659efda242a4c6c5702efbcac, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7478941659efda242a4c6c5702efbcac, type: 3}
       propertyPath: m_IsActive
@@ -864,11 +875,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: Purple_Wizard_idle_Final
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f38b2231335d144fa3808f346ed3b9c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f38b2231335d144fa3808f346ed3b9c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8109626300897138456}
   m_SourcePrefab: {fileID: 100100000, guid: 1f38b2231335d144fa3808f346ed3b9c, type: 3}
+--- !u!23 &8039896630375333691 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 1f38b2231335d144fa3808f346ed3b9c, type: 3}
+  m_PrefabInstance: {fileID: 8670245955934823359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8400215043535150830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f38b2231335d144fa3808f346ed3b9c, type: 3}
+  m_PrefabInstance: {fileID: 8670245955934823359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8109626300897138456
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8400215043535150830}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca9beaa4419853a40b3f6ca22be00092, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &9212218315764548692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1f38b2231335d144fa3808f346ed3b9c, type: 3}
