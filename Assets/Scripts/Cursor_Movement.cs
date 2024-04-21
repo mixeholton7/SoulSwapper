@@ -12,7 +12,7 @@ public class Cursor_Movement : MonoBehaviour
     private string GroundTag = "Ground";
     private Vector3 targetPos; 
     private Animator animator; 
-    private bool canMove = false; 
+    private bool canMoveCurse = false; 
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +24,12 @@ public class Cursor_Movement : MonoBehaviour
 
     void Update()
     {
-        if(!canMove) 
+        if(!canMoveCurse) 
         {
             return; 
         }
 
-        if(Vector3.Distance(transform.position, targetPos) > 1f && canMove)
+        if(Vector3.Distance(transform.position, targetPos) > 1f && canMoveCurse)
         {
             animator.SetBool("Moving", true);
         }
@@ -42,7 +42,7 @@ public class Cursor_Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(!canMove) 
+        if(!canMoveCurse) 
         { 
             return; 
         }
@@ -73,8 +73,13 @@ public class Cursor_Movement : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, qDir, Time.deltaTime * rotSpeed);
     }
 
-    public void CanMove() 
+    public void CanMoveCurse() 
     {
-        canMove = true; 
+        canMoveCurse = true; 
+    }
+
+    public void CantMoveCurse()
+    {
+        canMoveCurse = false;
     }
 }

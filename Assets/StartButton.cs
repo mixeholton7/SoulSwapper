@@ -24,9 +24,9 @@ public class StartButton : MonoBehaviour
         StartCoroutine("ShowText"); 
 
         cameraMovement.MoveCamera(); 
-        cursorMovement.CanMove(); 
-        wasdMovement.CanMove(); 
-        gamePadMovement.CanMove(); 
+        cursorMovement.CanMoveCurse(); 
+        wasdMovement.CanMoveWASD(); 
+        gamePadMovement.CanMovePad(); 
 
         Destroy(button); 
         Destroy(startMenu); 

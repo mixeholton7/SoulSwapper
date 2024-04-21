@@ -17,7 +17,7 @@ public class WASD_Movement : MonoBehaviour
     private bool groundedPlayer;
     private Animator animator; 
 
-    private bool canMove = false;
+    private bool canMoveWASD = false;
 
     void Start() 
     {
@@ -28,7 +28,7 @@ public class WASD_Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!canMove) 
+        if(!canMoveWASD) 
         {
             return; 
         }
@@ -52,9 +52,14 @@ public class WASD_Movement : MonoBehaviour
 
     }
 
-    public void CanMove() 
+    public void CanMoveWASD() 
     {
-        canMove = true; 
+        canMoveWASD = true; 
+    }
+
+    public void CantMoveWASD()
+    {
+        canMoveWASD = false;
     }
 }
 

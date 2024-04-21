@@ -144,8 +144,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.13426, y: 18.37225, z: 6.3288784}
-  m_Center: {x: -1.8310318, y: 8.686125, z: 2.6644392}
+  m_Size: {x: 5.596285, y: 9.865253, z: 4.002168}
+  m_Center: {x: -1.529006, y: 8.372392, z: 2.0894806}
 --- !u!54 &1184083865850179784
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -220,10 +220,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524645873d173dc4b96a2d9d8ae6094a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorMovement: {fileID: 8527438288537769266}
+  wasdMovement: {fileID: 0}
+  gamePadMovement: {fileID: 0}
   fireballLoc: {fileID: 205884650996639219}
   fireball: {fileID: 355659711271858146, guid: a92b01040d4a1194e95417109d79f1b6, type: 3}
   eaterSymbol: {fileID: 5738886133773326642}
   shield: {fileID: 4077402903386139865}
+  myMeshRend: {fileID: 6954717040895427848}
   AudioSource: {fileID: 7584862333840910598}
   Fire: {fileID: 8300000, guid: 800087bc355827344b467c989e436302, type: 3}
   Eat: {fileID: 8300000, guid: 799264e8f7af7304a93d30b0149db5eb, type: 3}
@@ -526,6 +530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShield
       objectReference: {fileID: 0}
+    - target: {fileID: 1415222407204347725, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
     - target: {fileID: 3568347493422045566, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
       propertyPath: m_LocalScale.x
       value: 20.61
@@ -657,6 +665,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 284608192447965529}
   m_SourcePrefab: {fileID: 100100000, guid: 90bb4647cdbe9ac4b995e1e8b519950a, type: 3}
+--- !u!23 &6954717040895427848 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 90bb4647cdbe9ac4b995e1e8b519950a, type: 3}
+  m_PrefabInstance: {fileID: 8594429313347950988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8128771453529259623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 90bb4647cdbe9ac4b995e1e8b519950a, type: 3}
