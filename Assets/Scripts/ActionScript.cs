@@ -21,7 +21,8 @@ public class ActionScript : MonoBehaviour
     public int currentType;
 
     private bool CanIShield => currentType == 3;
-    private bool CanIFireBall = true;
+    private bool CanIFireBall => currentType == 1;
+    private bool ihaveShootBall = false;
     public bool canIEat => currentType == 2;
     private bool amIdead = false;
 
@@ -55,22 +56,23 @@ public class ActionScript : MonoBehaviour
                 eaterSymbol.SetActive(false);
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && currentType == 1 && this.gameObject.tag == "Player1")
             {
                 print("SPACEBAR");
+                print(currentType);
                 checkType(currentType);
                 // Fireball if currType == 1
                 // Eater if currtype == 2
                 // shield if currtype == 3
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && currentType == 1 && this.gameObject.tag == "Player3")
             {
                 print("I click left mouse");
                 checkType(currentType);
             }
 
-            if (Input.GetButtonDown("fire1joy"))
+            if (Input.GetButton("fire1joy") && currentType == 1 && this.gameObject.tag == "Player2")
             {
                 print("I press A");
                 checkType(currentType);
@@ -79,9 +81,9 @@ public class ActionScript : MonoBehaviour
     }
 
     void checkType(int type) { 
-        if (type == 1) // FIREBALL
+        if (currentType == type) // FIREBALL
         { 
-            if (CanIFireBall)
+            if (!ihaveShootBall)
             {
                 StartCoroutine(ShootFireball());
                 var fireballCopy = fireball;
@@ -187,9 +189,9 @@ public class ActionScript : MonoBehaviour
 
     IEnumerator ShootFireball()
     {
-        CanIFireBall = false;
+        ihaveShootBall = true;
         yield return new WaitForSeconds(1);
-        CanIFireBall = true;
+        ihaveShootBall = false;
     }
 
     IEnumerator increaseCount()
