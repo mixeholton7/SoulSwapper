@@ -464,6 +464,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1382353594}
     - target: {fileID: 6169568582378150709, guid: 27aa79847c0dbb94b9e1646aefaae278, type: 3}
+      propertyPath: GameMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: dd2816024d7e2cb4183fd5933b7f78dc, type: 3}
+    - target: {fileID: 6169568582378150709, guid: 27aa79847c0dbb94b9e1646aefaae278, type: 3}
       propertyPath: startText1
       value: 
       objectReference: {fileID: 1382353598}
@@ -479,6 +483,10 @@ PrefabInstance:
       propertyPath: startText4
       value: 
       objectReference: {fileID: 1382353595}
+    - target: {fileID: 6169568582378150709, guid: 27aa79847c0dbb94b9e1646aefaae278, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1268328577}
     - target: {fileID: 6169568582378150709, guid: 27aa79847c0dbb94b9e1646aefaae278, type: 3}
       propertyPath: wasdMovement
       value: 
@@ -3725,11 +3733,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5115175156176867102, guid: f88b37a20b02ded44a509d3d55f19232, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 74d6467e139b8b041a91118434289948, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f88b37a20b02ded44a509d3d55f19232, type: 3}
+--- !u!82 &1268328577 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5115175156176867102, guid: f88b37a20b02ded44a509d3d55f19232, type: 3}
+  m_PrefabInstance: {fileID: 1268328576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1289982586
 PrefabInstance:
   m_ObjectHideFlags: 0
