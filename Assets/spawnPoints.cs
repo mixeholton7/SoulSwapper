@@ -26,7 +26,11 @@ public class spawnPoints : MonoBehaviour
         if (pointAlive.Length < 6 )
         {
             var whereToSpawn = Random.Range(0, spawnpoints.Length);
-            Instantiate(pointFab, spawnpoints[whereToSpawn].transform.position, spawnpoints[whereToSpawn].transform.rotation);
+            print(whereToSpawn);
+            var pointCopy = pointFab;
+            Instantiate(pointCopy, spawnpoints[whereToSpawn].transform.position, spawnpoints[whereToSpawn].transform.rotation);
+            print(spawnpoints[whereToSpawn]);
+            print(spawnpoints[whereToSpawn].transform.position);
         }
 
         yield return new WaitForSeconds(2);
