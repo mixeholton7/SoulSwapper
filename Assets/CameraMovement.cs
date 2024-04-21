@@ -17,7 +17,7 @@ public class CameraMovement : MonoBehaviour
     // Total distance between the markers.
     private float journeyLength;
 
-    private float startFOV = 20; 
+    private float startFOV = 30; 
     private float endFOV = 40; 
     private Camera camera; 
     private bool moveCamera = false; 

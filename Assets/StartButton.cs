@@ -18,6 +18,11 @@ public class StartButton : MonoBehaviour
     public GameObject startText4; 
 
 
+    void Start()
+    {
+        StartGame(); 
+    }
+
 
     public void StartGame() 
     {
