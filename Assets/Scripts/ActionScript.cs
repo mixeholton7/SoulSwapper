@@ -49,9 +49,9 @@ public class ActionScript : MonoBehaviour
             {
                 shield.SetActive(true);
 
-                chicken.SetActive(false);
+                // chicken.SetActive(false);
                 wizard.SetActive(false); 
-                fire_wizard.SetActive(false); 
+                // fire_wizard.SetActive(false); 
 
                 shield_wizard.SetActive(true);
                 myMeshRend = shield_wizard.GetComponent<MeshRenderer>();
@@ -70,18 +70,18 @@ public class ActionScript : MonoBehaviour
 
             if (canIEat)
             {
-                eaterSymbol.SetActive(true); 
+                // eaterSymbol.SetActive(true); 
                 
                 wizard.SetActive(false); 
-                fire_wizard.SetActive(false);
-                shield_wizard.SetActive(false);
+                // fire_wizard.SetActive(false);
+                // shield_wizard.SetActive(false);
 
                 chicken.SetActive(true);
                 myMeshRend = chicken.GetComponent<MeshRenderer>();
             }
             else
             {
-                eaterSymbol.SetActive(false);
+                // eaterSymbol.SetActive(false);
 
                 chicken.SetActive(false);
                 fire_wizard.SetActive(false);
@@ -93,21 +93,21 @@ public class ActionScript : MonoBehaviour
 
             if (CanIFireBall)
             {
-                chicken.SetActive(false);
+                // chicken.SetActive(false);
                 wizard.SetActive(false);
-                shield_wizard.SetActive(false);
+                // shield_wizard.SetActive(false);
 
                 fire_wizard.SetActive(true); 
                 myMeshRend = fire_wizard.GetComponent<MeshRenderer>();
             }
             else
             {
-                chicken.SetActive(false);
+                // chicken.SetActive(false);
                 fire_wizard.SetActive(false); 
                 shield_wizard.SetActive(false);
 
-                wizard.SetActive(true);
-                myMeshRend = wizard.GetComponent<MeshRenderer>();
+                // wizard.SetActive(true);
+                // myMeshRend = wizard.GetComponent<MeshRenderer>();
             }
 
             if (Input.GetKeyDown(KeyCode.Space) && currentType == 1 && this.gameObject.tag == "Player1")
