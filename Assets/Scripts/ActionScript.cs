@@ -75,7 +75,8 @@ public class ActionScript : MonoBehaviour
             if (CanIFireBall)
             {
                 StartCoroutine(ShootFireball());
-                Instantiate(fireball, fireballLoc.transform.position, Quaternion.identity);
+                var fireballCopy = fireball;
+                Instantiate(fireballCopy, fireballLoc.transform.position, fireballLoc.transform.rotation);
             }
             
         }
