@@ -6138,10 +6138,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3799038684513865114, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4863469118243706058, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14
@@ -6186,22 +6182,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCursor
       objectReference: {fileID: 0}
-    - target: {fileID: 5327550759690860665, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738886133773326642, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5963211973732686379, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358688365019201772, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8084351791183021422, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
       propertyPath: wasdMovement
       value: 
@@ -6210,22 +6190,6 @@ PrefabInstance:
       propertyPath: gamePadMovement
       value: 
       objectReference: {fileID: 2991927028196408795}
-    - target: {fileID: 8261260185799474212, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8261260185799474212, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8261260185799474212, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8261260185799474212, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 8527438288537769266, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
       propertyPath: Camera
       value: 
@@ -6254,10 +6218,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 624254640604888632, guid: 5b3f7b2ea7de18b42a011c8d378d511f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 986575544213231239, guid: 5b3f7b2ea7de18b42a011c8d378d511f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14
@@ -6296,10 +6256,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 986575544213231239, guid: 5b3f7b2ea7de18b42a011c8d378d511f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3470288668226616222, guid: 5b3f7b2ea7de18b42a011c8d378d511f, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6365867301824381938, guid: 5b3f7b2ea7de18b42a011c8d378d511f, type: 3}
@@ -6382,13 +6338,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerWASD
       objectReference: {fileID: 0}
-    - target: {fileID: 7978795666042783957, guid: 347f0c4b388bfa940982d6cf8ac7c131, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8341396694571974862, guid: 347f0c4b388bfa940982d6cf8ac7c131, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9038363936320454140, guid: 347f0c4b388bfa940982d6cf8ac7c131, type: 3}
       propertyPath: cursorMovement
