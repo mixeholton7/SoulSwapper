@@ -23,9 +23,9 @@ public class scoreManeger : MonoBehaviour
     }
     void Start()
     {
-        player1ScoreText.text = "Grey Wizard has: " + player1Score.ToString() + " points";
-        player2ScoreText.text = "Purple Wizard has: " + player2Score.ToString() + " points";
-        player3ScoreText.text = "Blue Wizard has: " + player3Score.ToString() + " points";
+        player1ScoreText.text = "Blue Wizard Finn has: " + player1Score.ToString() + " points";
+        player2ScoreText.text = "Purple Wizard Fifi has: " + player2Score.ToString() + " points";
+        player3ScoreText.text = "Grey Wizard Fido has: " + player3Score.ToString() + " points";
     }
 
   
@@ -34,17 +34,17 @@ public class scoreManeger : MonoBehaviour
         if (playerType == 1)
         {
             player1Score++;
-            player1ScoreText.text = player1Score.ToString() + " points";
+            player1ScoreText.text = "Blue Wizard Finn has: " + player1Score.ToString() + " points";
         }
         else if (playerType == 2)
         {
             player2Score++;
-            player2ScoreText.text = player2Score.ToString() + " points";
+            player2ScoreText.text = "Purple Wizard Fifi has: " + player2Score.ToString() + " points";
         }
         else if (playerType == 3) 
         {
             player3Score++;
-            player3ScoreText.text = player3Score.ToString() + " points";
+            player3ScoreText.text = "Grey Wizard Fido has: " + player3Score.ToString() + " points";
         }
         else
         {
