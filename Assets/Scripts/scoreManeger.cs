@@ -23,9 +23,9 @@ public class scoreManeger : MonoBehaviour
     }
     void Start()
     {
-        player1ScoreText.text = player1Score.ToString() + " points";
-        player2ScoreText.text = player2Score.ToString() + " points";
-        player3ScoreText.text = player3Score.ToString() + " points";
+        player1ScoreText.text = "Grey Wizard has: " + player1Score.ToString() + " points";
+        player2ScoreText.text = "Purple Wizard has: " + player2Score.ToString() + " points";
+        player3ScoreText.text = "Blue Wizard has: " + player3Score.ToString() + " points";
     }
 
   
