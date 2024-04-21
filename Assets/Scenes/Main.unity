@@ -6223,6 +6223,10 @@ PrefabInstance:
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8084351791183021422, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
+      propertyPath: Swap
+      value: 
+      objectReference: {fileID: 8300000, guid: e6d7cf1f488cbe04c9074145c5882313, type: 3}
+    - target: {fileID: 8084351791183021422, guid: 6ac51d04883b6c1469577ac958a17d95, type: 3}
       propertyPath: wasdMovement
       value: 
       objectReference: {fileID: 8216620208892037040}
@@ -6307,6 +6311,10 @@ PrefabInstance:
       value: PlayerGamePadImplementedMechs
       objectReference: {fileID: 0}
     - target: {fileID: 7547331314232205714, guid: 5b3f7b2ea7de18b42a011c8d378d511f, type: 3}
+      propertyPath: Swap
+      value: 
+      objectReference: {fileID: 8300000, guid: e6d7cf1f488cbe04c9074145c5882313, type: 3}
+    - target: {fileID: 7547331314232205714, guid: 5b3f7b2ea7de18b42a011c8d378d511f, type: 3}
       propertyPath: wasdMovement
       value: 
       objectReference: {fileID: 8216620208892037040}
@@ -6386,6 +6394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerWASD
       objectReference: {fileID: 0}
+    - target: {fileID: 9038363936320454140, guid: 347f0c4b388bfa940982d6cf8ac7c131, type: 3}
+      propertyPath: Swap
+      value: 
+      objectReference: {fileID: 8300000, guid: e6d7cf1f488cbe04c9074145c5882313, type: 3}
     - target: {fileID: 9038363936320454140, guid: 347f0c4b388bfa940982d6cf8ac7c131, type: 3}
       propertyPath: cursorMovement
       value: 

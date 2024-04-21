@@ -14,9 +14,10 @@ public class ActionScript : MonoBehaviour
     public GameObject eaterSymbol;
     public GameObject shield;
     public MeshRenderer myMeshRend;
-    public AudioSource AudioSource;
+    private AudioSource audioSource;
     public AudioClip Fire;
     public AudioClip Eat;
+    public AudioClip Swap;
 
     public int currentType;
 
@@ -29,6 +30,7 @@ public class ActionScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         shield.SetActive(false);
         StartCoroutine(increaseCount());
     }
@@ -190,6 +192,7 @@ public class ActionScript : MonoBehaviour
     IEnumerator ShootFireball()
     {
         ihaveShootBall = true;
+        audioSource.PlayOneShot(Fire);
         yield return new WaitForSeconds(1);
         ihaveShootBall = false;
     }
@@ -200,7 +203,9 @@ public class ActionScript : MonoBehaviour
         currentType++;
         if (currentType == 4)
         {
+            audioSource.PlayOneShot(Swap);
             currentType = 1;
+
         }
         StartCoroutine(increaseCount());
     }
