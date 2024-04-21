@@ -12,22 +12,43 @@ public class StartButton : MonoBehaviour
     public WASD_Movement wasdMovement;
     public GamePad_Movement gamePadMovement;
 
+    public AudioSource audioSource;
+    public AudioClip GameMusic;
     public GameObject startText1; 
     public GameObject startText2; 
     public GameObject startText3; 
-    public GameObject startText4; 
+    public GameObject startText4;
 
+    public bool GameIsStarted = false;
 
     void Start()
     {
-        StartGame(); 
+        
+        audioSource.Play();
+        //StartGame(); 
     }
 
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameIsStarted = true;
+        }
+        if (GameIsStarted)
+        {
+            StartGame();
+            GameIsStarted = false;
+        }
+        
+    }
 
     public void StartGame() 
     {
         StartCoroutine("ShowText"); 
-
+        audioSource.Stop();
+        audioSource.clip = GameMusic;
+        audioSource.Play();
         cameraMovement.MoveCamera(); 
         cursorMovement.CanMoveCurse(); 
         wasdMovement.CanMoveWASD(); 
