@@ -38,6 +38,15 @@ public class ActionScript : MonoBehaviour
             shield.SetActive(false);
         }
 
+        if (canIEat)
+        {
+            eaterSymbol.SetActive(true);
+        }
+        else
+        {
+            eaterSymbol.SetActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             print("SPACEBAR");
@@ -84,7 +93,7 @@ public class ActionScript : MonoBehaviour
     {
         var playerType = 0;
 
-        if (other.tag == "Point" || canIEat)
+        if (other.tag == "Point" && currentType == 2)
         {
             if (this.gameObject.tag == "Player1")
             {
