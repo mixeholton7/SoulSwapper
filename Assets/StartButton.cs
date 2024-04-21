@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class StartButton : MonoBehaviour
 {
@@ -13,9 +12,11 @@ public class StartButton : MonoBehaviour
     public WASD_Movement wasdMovement;
     public GamePad_Movement gamePadMovement;
 
-    public TMP_Text startText1; 
-    public TMP_Text startText2; 
-    public TMP_Text startText3; 
+    public GameObject startText1; 
+    public GameObject startText2; 
+    public GameObject startText3; 
+    public GameObject startText4; 
+
 
 
     public void StartGame() 
@@ -31,16 +32,32 @@ public class StartButton : MonoBehaviour
         Destroy(startMenu); 
     }
 
-    IEnumerator ShowText()
+    public IEnumerator ShowText()
     {
-        Debug.Log("hello"); 
-        
-        startText1.text = "HEj"; 
+        yield return new WaitForSeconds(0.5f);
 
-        yield return new WaitForSeconds(2);
+        startText1.SetActive(true);
 
-        Debug.Log("yo"); 
+        yield return new WaitForSeconds(1);
 
-        startText1.text = ""; 
+        startText1.SetActive(false);
+        startText2.SetActive(true);
+
+        yield return new WaitForSeconds(1);
+
+        startText2.SetActive(false);
+        startText3.SetActive(true);
+
+        yield return new WaitForSeconds(1);
+
+        startText3.SetActive(false);
+
+        yield return new WaitForSeconds(0.5f);
+
+        startText4.SetActive(true);
+
+        yield return new WaitForSeconds(1.5f);
+
+        startText4.SetActive(false);
     }
 }
