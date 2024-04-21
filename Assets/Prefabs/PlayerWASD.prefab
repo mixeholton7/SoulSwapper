@@ -45,8 +45,8 @@ GameObject:
   - component: {fileID: 3202153288275982885}
   - component: {fileID: 2439092666584632490}
   - component: {fileID: 9103244308533723409}
-  - component: {fileID: 1902738850301754006}
   - component: {fileID: -4262378199147579022}
+  - component: {fileID: 9038363936320454140}
   m_Layer: 0
   m_Name: PlayerWASD
   m_TagString: Player1
@@ -185,18 +185,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5.956656
   m_Center: {x: 0, y: 6.0490394, z: 1.5056887}
---- !u!114 &9038363936320454140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4339968211015393871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 524645873d173dc4b96a2d9d8ae6094a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &-4262378199147579022
 AudioSource:
   m_ObjectHideFlags: 0
@@ -293,6 +281,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9038363936320454140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4339968211015393871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524645873d173dc4b96a2d9d8ae6094a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireballLoc: {fileID: 2698409940056807608}
+  fireball: {fileID: 355659711271858146, guid: a92b01040d4a1194e95417109d79f1b6, type: 3}
+  eaterSymbol: {fileID: 7978795666042783957}
+  shield: {fileID: 7209313685399109526}
+  AudioSource: {fileID: -4262378199147579022}
+  Fire: {fileID: 8300000, guid: 800087bc355827344b467c989e436302, type: 3}
+  Eat: {fileID: 8300000, guid: 799264e8f7af7304a93d30b0149db5eb, type: 3}
+  currentType: 1
 --- !u!1 &7978795666042783957
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7723477804731829332, guid: 0f1ecfc8581d38b4682bd67aed36feb3, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e3ad458f6d186840a766e3f569ba406, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
